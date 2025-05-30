@@ -1,17 +1,16 @@
 # SnakeNet
 
 [![.NET 6 Build](https://github.com/WhiteWrym18/SnakeNetClassic/actions/workflows/build-dotnet6-windows7.yml/badge.svg?branch=main)](https://github.com/WhiteWrym18/SnakeNetClassic/actions/workflows/build-dotnet6-windows7.yml)
-[![.NET Framework 3.5 Build](https://github.com/WhiteWrym18/SnakeNetClassic/actions/workflows/net35.yml/badge.svg?branch=main)](https://github.com/WhiteWrym18/SnakeNetClassic/actions/workflows/net35.yml)
-
-
+<!-- .NET Framework 3.5 CI is not supported on GitHub Actions. Build must be done locally or on a self-hosted runner. -->
+[![.NET Framework 3.5 Build (local only)](https://img.shields.io/badge/.NET%203.5-local--build--only-lightgrey)](#)
 
 
 ## Compatibility
 
 | Operating System   | Framework           | Supported |
 |-------------------|--------------------|-----------|
-| Windows 9x/ME     | dotnet9x           | ✅        |
-| Windows XP/Vista  | .NET Framework 3.5 | ✅        |
+| Windows 9x/ME     | dotnet9x           | ⚠️ (CI not available)        |
+| Windows XP/Vista  | .NET Framework 3.5 | ⚠️ (CI not available)       |
 | Windows 7/8/8.1   | .NET 6             | ✅        |
 
 All new cross-platform and modern UI development is at [SnakeNetFusion (.NET MAUI)](https://github.com/WhiteWrym18/SnakeNetFusion).
