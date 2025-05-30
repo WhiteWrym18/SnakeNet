@@ -16,7 +16,7 @@ jobs:
         with:
           dotnet-version: '6.0.x'
       - name: Restore dependencies
-        run: dotnet restore --framework net6.0-windows
+        run: dotnet restore -p:TargetFramework=net6.0-windows
       - name: Build
         run: dotnet build --framework net6.0-windows --configuration Release --no-restore
       - name: Test
