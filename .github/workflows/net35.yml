@@ -1,0 +1,17 @@
+name: .NET Framework 3.5 Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET (for MSBuild)
+      uses: microsoft/setup-msbuild@v2
+    - name: Build (net35-windows)
+      run: msbuild /p:Configuration=Release /p:TargetFramework=net35-windows SnakeNet.csproj
