@@ -23,12 +23,27 @@ namespace SnakeNet
             Size = new Size(gridSize * cellSize + 16, gridSize * cellSize + 39);
             Text = "Snake Game";
 
+#if NET9X
             KeyDown += MainForm_KeyDown;
+#else
+            KeyDown += MainForm_KeyDown;
+#endif
             StartGame();
             timer1.Tick += GameLoop;
             timer1.Start();
         }
 
+#if NET9X
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            // dotnet9x: KeyEventArgs may not have KeyCode, use KeyData
+            Keys key = e.KeyData;
+            if (key == Keys.Up && direction != "Down") direction = "Up";
+            else if (key == Keys.Down && direction != "Up") direction = "Down";
+            else if (key == Keys.Left && direction != "Right") direction = "Left";
+            else if (key == Keys.Right && direction != "Left") direction = "Right";
+        }
+#else
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up && direction != "Down") direction = "Up";
@@ -36,6 +51,7 @@ namespace SnakeNet
             else if (e.KeyCode == Keys.Left && direction != "Right") direction = "Left";
             else if (e.KeyCode == Keys.Right && direction != "Left") direction = "Right";
         }
+#endif
 
         private void StartGame()
         {
