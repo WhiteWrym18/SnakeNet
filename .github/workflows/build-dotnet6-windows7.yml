@@ -1,0 +1,23 @@
+name: Build on Windows 7 with .NET 6 (simulato)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-2019 # Il runner più simile a Windows 7 disponibile
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET 6
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
+      - name: Restore dependencies
+        run: dotnet restore --framework net6.0-windows
+      - name: Build
+        run: dotnet build --framework net6.0-windows --configuration Release --no-restore
+      - name: Test
+        run: echo "No tests defined for this project."
