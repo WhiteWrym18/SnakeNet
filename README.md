@@ -1,9 +1,10 @@
 # SnakeNet
 
-[![.NET 6 Build](https://github.com/WhiteWrym18/SnakeNetClassic/actions/workflows/build-dotnet6-windows7.yml/badge.svg?branch=main)](https://github.com/WhiteWrym18/SnakeNetClassic/actions/workflows/dotnet6.yml)
+[![.NET 6 Build](https://github.com/WhiteWrym18/SnakeNetClassic/actions/workflows/build-dotnet6-windows7.yml/badge.svg?branch=main)](https://github.com/WhiteWrym18/SnakeNetClassic/actions/workflows/build-dotnet6-windows7.yml)
 [![.NET Framework 3.5 Build](https://github.com/WhiteWrym18/SnakeNetClassic/actions/workflows/net35.yml/badge.svg?branch=main)](https://github.com/WhiteWrym18/SnakeNetClassic/actions/workflows/net35.yml)
-[
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+
+
+
 
 ## Compatibility
 
