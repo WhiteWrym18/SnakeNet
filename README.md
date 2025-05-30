@@ -1,7 +1,5 @@
 # SnakeNet
 
-**This repository now only contains the Windows 7 version of the Snake game (Windows Forms, .NET 6).**
-
 ## Compatibility
 
 | Operating System | Framework        | Supported |
